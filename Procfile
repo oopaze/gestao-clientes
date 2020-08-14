@@ -1,4 +1,1 @@
-.idea
-*.sqlite3
-*pyc
-media
+web: gunicorn gestaoclientes.wsgi
