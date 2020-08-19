@@ -1,0 +1,11 @@
+{% for cliente in clientes %}
+  <div class="card">
+    <div class="card-header">
+      <h4>{{cliente.nome}} {{cliente.sobrenome}}</h4>
+    </div>
+    <div class="card-body">
+      <p> Local: {{cliente.cidade}}-{{cliente.estado}} </p>
+      <p> Data de Nascimento: {{cliente.nascimento}} </p>
+    </div>
+  </div>
+{% endfor %}
