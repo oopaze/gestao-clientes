@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load bootstrap %}
 {% block title %} Cadastrar Cliente {% endblock %}
 {% block main %}
   <form class="" action="{% url 'cadastrar_usuario' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{form}}
-    <button class="btn btn-success" type="submit" name="button">Registrar</button>
+    {{ form|bootstrap_horizontal:'col-lg-3 mt-2' }}
+    <button class="btn btn-success" style='margin-left: 10px; min-width: 10%;'  type="submit" name="button">Registrar</button>
+    <a href="{% url 'ler_usuario' %}" class="btn btn-dark" style='min-width: 10%;'  type="submit" name="button">Voltar</a>
   </form>
 {% endblock %}

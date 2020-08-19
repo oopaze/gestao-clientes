@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['gestao-clientes-br.herokuapp.com',
 
 INSTALLED_APPS = [
     'clientes',
+    'bootstrapform',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
