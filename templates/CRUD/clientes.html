@@ -15,9 +15,7 @@
 
       <div class="card mt-2">
         <div class="card-header">
-          <a href="{% url 'atualizar_usuario' cliente.id %}">
-            <h4>{{cliente.nome}} {{cliente.sobrenome}}</h4>
-          </a>
+          <h4>{{cliente.nome}} {{cliente.sobrenome}}</h4>
         </div>
         <div class="card-body">
           <p> Local: {{cliente.cidade}}-{{cliente.estado}} </p>
