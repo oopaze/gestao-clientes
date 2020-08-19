@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Deletar Cliente {% endblock %}
+{% block main %}
+  <form class="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-success" type="submit" name="button">Deletar</button>
+  </form>
+{% endblock %}

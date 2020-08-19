@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Atualizar Cliente {% endblock %}
+
+{% block main %}
+  <form class="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-success" type="submit" name="button">Atualizar</button>
+  </form>
+{% endblock %}

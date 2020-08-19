@@ -4,6 +4,6 @@ from .views import cadastrar_usuario, ler_usuario, atualizar_usuario, deletar_us
 urlpatterns = [
     path('', ler_usuario, name='ler_usuario'),
     path('cadastrar/', cadastrar_usuario, name='cadastrar_usuario'),
-    path('atualizar/', atualizar_usuario, name='atualizar_usuario'),
-    path('deletar/', deletar_usuario, name='deletar_usuario'),
+    path('atualizar/<id>', atualizar_usuario, name='atualizar_usuario'),
+    path('deletar/<id>', deletar_usuario, name='deletar_usuario'),
 ]

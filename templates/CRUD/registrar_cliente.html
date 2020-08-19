@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Cadastrar Cliente {% endblock %}
+{% block main %}
+  <form class="" action="{% url 'cadastrar_usuario' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button class="btn btn-success" type="submit" name="button">Registrar</button>
+  </form>
+{% endblock %}

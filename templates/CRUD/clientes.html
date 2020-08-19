@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %} Clientes {% endblock %}
+
+{% block nav-option %}
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'cadastrar_usuario' %}"> Adicionar Cliente</a>
+  </li>
+{% endblock %}
+
+{% block main %}
+  <div class="row">
+
+    {% for cliente in clientes %}
+    <div class="col-md-6 offset-md-3">
+
+      <div class="card mt-2">
+        <div class="card-header">
+          <a href="{% url 'atualizar_usuario' cliente.id %}">
+            <h4>{{cliente.nome}} {{cliente.sobrenome}}</h4>
+          </a>
+        </div>
+        <div class="card-body">
+          <p> Local: {{cliente.cidade}}-{{cliente.estado}} </p>
+          <p> Data de Nascimento: {{cliente.nascimento}} </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-success" href="{% url 'atualizar_usuario' cliente.id %}"> Atualizar </a>
+          <a class="btn btn-danger" href="{% url 'deletar_usuario' cliente.id %}">Deletar</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
