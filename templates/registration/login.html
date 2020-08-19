@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %} Home {% endblock %}
+
+{% block main %}
+  {% if user.is_authenticated %}
+    <h1 style='margin-left: 15px;' > Seja Bem-Vindo!</h1>
+  {% else %}
+    <h1 style='margin-left: 15px;'> Entrar </h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form|bootstrap_horizontal:'col-lg-3 mt-2' }}
+      <button class="btn btn-success" style='margin-left: 15px; min-width: 10%;' type="submit" name="button">Entrar</button>
+    </form>
+  {% endif %}
+{% endblock %}
